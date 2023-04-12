@@ -79,13 +79,16 @@ h3 {
 .menu {
   font-size: 4rem;
   color: var(--color-primary);
-  margin: 1rem;
+  padding: 0 1rem;
   cursor: pointer;
-  transform: rotate(90deg);
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.3s;
 }
 
 .rotate {
-  transform: rotate(90deg) !important;
+  display: inline-block;
+  transform: rotate(180deg);
   transition: transform 0.3s;
 }
 
@@ -106,6 +109,11 @@ h3 {
 .info-grid-reverse {
   background: var(--color-primary);
   color: var(--color-secondary);
+}
+
+.info-grid a {
+  text-decoration: none;
+  padding: 0.8rem 2rem;
 }
 
 .info {
@@ -485,5 +493,116 @@ h3 {
 
   .item {
     margin: 0;
+  }
+}
+
+/*Encomenda*/
+
+.primary {
+  padding: 5rem 13%;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.secondary {
+  padding: 0;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.encomenda form {
+  display: flex;
+  flex-direction: column;
+}
+
+.encomenda input {
+  margin: 1rem 0;
+  padding: 0.3rem 1rem;
+  width: 40%;
+  height: 3rem;
+  background-color: #ffeeee;
+  border: none;
+}
+
+.encomenda textarea {
+  background-color: #ffeeee;
+  padding: 0.3rem 1rem;
+  height: 20rem;
+  width: 70%;
+  margin: 1rem 0;
+  border: none;
+}
+
+.primary h1 {
+  color: var(--color-secondary);
+  font-size: 3rem;
+}
+
+.secondary h1 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.encomenda .btn {
+  margin: 1rem 0;
+  width: 15rem;
+  border-radius: 20px;
+}
+
+/*Contactos*/
+.contactos-title {
+  background: var(--color-primary);
+  text-align: center;
+  padding: 0.1rem;
+}
+
+.contactos-title h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.contactos-body {
+  padding: 1rem 5rem;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.contactos-image {
+  background-color: var(--color-secondary);
+}
+
+.teste {
+  width: 100vw;
+  max-width: 100%;
+}
+
+.contactos-body h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
+.contactos-body h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.contactos-item {
+  border-bottom: 1px solid var(--color-primary);
+  margin-bottom: 7rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contactos-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .contactos-item {
+    border-bottom: none;
+    margin-bottom: 2rem;
   }
 }

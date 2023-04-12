@@ -2,6 +2,7 @@ import React from "react";
 import group from "../../images/group-icon.png";
 import camera from "../../images/camera-icon.png";
 import mail from "../../images/mail-icon.png";
+import { Link } from "react-router-dom";
 
 export const Info = () => {
   return (
@@ -13,7 +14,9 @@ export const Info = () => {
           Sabemos o quão importante é trabalhar com boas pessoas. Orgulhamo-nos
           em ser éticos, educados e trabalhadores.
         </p>
-        <button className="btn btn-bottom">Sobre nós</button>
+        <Link to="/aboutus" className="btn btn-bottom">
+          Sobre Nós
+        </Link>
       </div>
       <div className="info">
         <img src={camera}></img>
@@ -22,7 +25,9 @@ export const Info = () => {
           Visite a nossa galeria para ficar a par de alguns dos nossos produtos
           disponíveis que temos para lhe oferecer!
         </p>
-        <button className="btn btn-bottom">Galeria</button>
+        <Link to="/galeria" className="btn btn-bottom">
+          Galeria
+        </Link>
       </div>
       <div className="info">
         <img src={mail}></img>
@@ -31,7 +36,9 @@ export const Info = () => {
           Adorávamos saber a tua opinião. Expões as tuas questões, ideias ou
           comentários. Até já!
         </p>
-        <button className="btn btn-bottom">Contactos</button>
+        <Link to="/contactos" className="btn btn-bottom">
+          Contactos
+        </Link>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ const Navbar = ({ redux: { path } }) => {
   const toggleVisible = () => {
     setVisible(!visible);
   };
+  console.log(visible);
   return (
     <div className="nav">
       <div className="visible">

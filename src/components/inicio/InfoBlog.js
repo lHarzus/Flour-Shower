@@ -1,5 +1,6 @@
 import React from "react";
 import donut from "../../images/donut.png";
+import { Link } from "react-router-dom";
 
 export const InfoBlog = () => {
   return (
@@ -11,7 +12,9 @@ export const InfoBlog = () => {
           confecionar receitas e a partilhar as suas experincias culinárias, e
           algumas dicas para fazer em sua casa
         </p>
-        <button className="btn btn-reverse">Blog</button>
+        <Link to="/blog" className="btn btn-reverse">
+          Blog
+        </Link>
       </div>
       <div className="image">
         <img src={donut}></img>

@@ -5,7 +5,7 @@ export const Portais = () => {
     <Fragment>
       <div className="portal">
         <form action="https://www.livroreclamacoes.pt/INICIO/">
-          <button className="btn btn-reverse" type="submit">
+          <button className="btn btn-reverse" type="submit" target="_blank">
             Livro de Reclamações
           </button>
         </form>
