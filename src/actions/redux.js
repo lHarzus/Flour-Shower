@@ -3,11 +3,12 @@ import {
   GET_CATEGORIES,
   GET_RECIPES,
   GET_RECIPESCAT,
+  GET_GALERIA,
 } from "../actions/types";
 import { getCategoriesData } from "../recipes/recipesdata";
 import { getRecipesData } from "../recipes/recipesdata";
 import { getRecipesCatData } from "../recipes/recipesdata";
-
+import { getGaleriaData } from "../recipes/galeriadata";
 //Change path
 export const changePath = path => async dispatch => {
   dispatch({
@@ -18,7 +19,7 @@ export const changePath = path => async dispatch => {
 
 //Get recipes
 export const getRecipes = () => dispatch => {
-  const res = getRecipesDate();
+  const res = getRecipesData();
   dispatch({
     type: GET_RECIPES,
     payload: res,
@@ -27,7 +28,7 @@ export const getRecipes = () => dispatch => {
 
 //Get recipes by category
 export const getRecipesCat = cat => dispatch => {
-  const res = getRecipesCatDate(cat);
+  const res = getRecipesCatData(cat);
   dispatch({
     type: GET_RECIPESCAT,
     payload: res,
@@ -36,9 +37,18 @@ export const getRecipesCat = cat => dispatch => {
 
 //Get Categories
 export const getCategories = () => dispatch => {
-  const res = getCategoriesDate();
+  const res = getCategoriesData();
   dispatch({
     type: GET_CATEGORIES,
+    payload: res,
+  });
+};
+
+//Get Galeria
+export const getGaleria = () => dispatch => {
+  const res = getGaleriaData();
+  dispatch({
+    type: GET_GALERIA,
     payload: res,
   });
 };

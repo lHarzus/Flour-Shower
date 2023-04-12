@@ -85,8 +85,12 @@ h3 {
 }
 
 .rotate {
-  transform: rotate(90deg);
+  transform: rotate(90deg) !important;
   transition: transform 0.3s;
+}
+
+.star {
+  color: var(--color-secondary);
 }
 
 /*Info*/
@@ -351,5 +355,135 @@ h3 {
   .aboutus-info img {
     height: 50vh;
     margin-right: 5vw;
+  }
+}
+
+/*Blog*/
+
+.blog {
+}
+
+.recipes {
+  margin: 35px;
+}
+
+.blog-categories p {
+  border: none;
+  background-color: white;
+  font-size: 1.5rem;
+  border: 1px solid rgb(231, 231, 231);
+  border-top: 2px solid rgb(209, 169, 209);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.blog-categories button {
+  border: none;
+  background-color: white;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  cursor: pointer;
+  width: 100%;
+}
+.single-recipe img {
+  width: 100%;
+}
+
+.recipe-category {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-align: center;
+}
+
+.recipe-name {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.recipe-name:after {
+  content: "";
+  margin: 0 45%;
+  display: block;
+  position: relative;
+  width: 10%;
+  border: 1px solid #dddddd;
+  margin-top: 8px;
+}
+
+.single-recipe {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.recipe-desc {
+  color: grey;
+}
+
+@media screen and (min-width: 768px) {
+  .blog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    columns: 2px 2px 2px;
+    margin: 50px 13%;
+    gap: 35px;
+  }
+
+  .recipes {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .single-recipe {
+    margin-bottom: 0rem;
+  }
+}
+
+/*Galeria*/
+
+.galeria {
+  padding: 5rem 13%;
+  text-align: center;
+  background: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.item {
+  margin: 2rem 0;
+}
+
+.item img {
+  width: 100%;
+}
+
+.content {
+  background: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.content p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .item {
+    margin: 0;
   }
 }

@@ -119,7 +119,7 @@ const recipes = [
       "cebola",
     ],
     category: "cozinha",
-    url: "https://www.pingodoce.pt/receitas/bacalhau-a-bras/",
+    url: "https://www.pingodoce.pt/wp-content/uploads/2016/03/bacalhau-a-bras.jpg",
   },
 ];
 
@@ -130,7 +130,8 @@ export const getRecipesData = () => {
 };
 
 export const getRecipesCatData = category => {
-  return recipes.filter(recipe => recipe.category === category);
+  if (category === "all") return recipes;
+  else return recipes.filter(recipe => recipe.category === category);
 };
 
 export const getCategoriesData = () => {
